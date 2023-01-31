@@ -6,3 +6,54 @@ output: github_document
 ```{setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Load Packages
+
+```{r, load-packages}
+library("tidyverse")
+library("tidymodels")
+library("GGally")
+```
+
+## Task3: Load data and
+
+```{r, task-3-load-data-1, message=False, warning=FALSE}
+hfi <- readr::read_csv("https://www.openintro.org/data/csv/hfi.csv")
+```
+
+```{r, task-3-load-data-2, message=FALSE, warning=FALSE}
+
+hfi %>%
+  ggplot(aes(x=hfi$pf_score)) + geom_histogram() + stat_bin(binwidth = 0.5)
+```
+
+1.  Is this an observational study or an experiment?
+2.  Describe the distribution of `pf_score` Is the distribution skewed? Are there any other interesting/odd features (outliers, multiple peaks, etc.)? What does that tell you about countries' personal freedoms? Is this what you expected to see? Why, or why not?
+3.  Excluding `pf_score`, select two other numeric variables (hint: look for `<dbl>` or `<int>` designations) and describe their relationship with each other using an appropriate visualization.
+
+## Task4: Pairwise Selection
+
+```{r task-4-pairwise-selection, warning=FALSE}
+
+hfi %>% 
+  select(ends_with("_score")) %>% 
+  ggpairs()
+```
+
+4\. For each pair of variables, how would you describe the relationship graphically? Do any of the relationships look linear? Are there any interesting/odd features (outliers, non-linear patterns, etc.)?
+
+5\. For each pair of variables, how would you describe the relationship numerically?
+
+## Task 5 Multiple Linear Regression Model
+
+```{r task-5-multiple-linear-regression-model, warning=FALSE}
+
+m_hr_ef <- lm(pf_score ~ hf_score + ef_score, data = hfi)
+tidy(m_hr_ef)
+```
+
+6\. Using your output, write the complete estimated equation for this model. Remember in Activity 2 that this looked like:
+
+TODO ADD EQUATION HERE
+
+7\. For each of the estimated parameters (the *y*-intercept, and slope associated with each explanatory variable - three total), interpret these values in the context of this problem. That is, what do they mean for a "non-data" person?

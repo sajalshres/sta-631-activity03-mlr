@@ -1,5 +1,10 @@
-Activity 03 - Multiple Linear Regression (MLR)
-================
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Activity 03 - Multiple Linear Regression (MLR)
 
 This activity is intended to be completed in one week - outside of class
 preparation work and two 75-minute class meetings. On our Blackboard
@@ -13,15 +18,15 @@ minimally:
 
 In this repository/directory, you should see five items:
 
-- `README-img` - a folder containing images that I am embedding within
-  this `README.md` file and other files. You do not need to do anything
-  with this.
-- `.gitignore` - a file that is used to specify what Git can ignore when
-  pushing to GitHub. You do not need to do anything with this.
-- `README.md` - the document you are currently reading.
-- `day01-fitting` - a folder that contains items for you to complete
-  during the first 75-minute class meeting.
-  <!-- - `day02-assessing` - a folder that contains items for you to complete during the second 75-minute class meeting.-->
+-   `README-img` - a folder containing images that I am embedding within
+    this `README.md` file and other files. You do not need to do
+    anything with this.
+-   `.gitignore` - a file that is used to specify what Git can ignore
+    when pushing to GitHub. You do not need to do anything with this.
+-   `README.md` - the document you are currently reading.
+-   `day01-fitting` - a folder that contains items for you to complete
+    during the first 75-minute class meeting.
+    <!-- - `day02-assessing` - a folder that contains items for you to complete during the second 75-minute class meeting.-->
 
 We will explore most of these items over this week. Before doing that,
 you will first make your own copy of this repository.
@@ -38,8 +43,8 @@ topics (reorganized to better correspond with our readings):
 
 Days 1 & 2:
 
-- *ISL* 3.2 & 3.3 - [Multiple
-  regression](https://openintro.shinyapps.io/ims-03-model-08/)
+-   *ISL* 3.2 & 3.3 - [Multiple
+    regression](https://openintro.shinyapps.io/ims-03-model-08/)
 
 Note that this tutorial covers materials for this week and next week.
 
@@ -83,32 +88,32 @@ be switching between RStudio and your GitHub repo (that you previously
 forked).
 
 1.  In RStudio, click on the
-    <img src="../README-img/rproj-icon.png" alt="RStudio Project" width = "20"/>
+    <img src="../README-img/rproj-icon.png" alt="RStudio Project" width="20"/>
     icon (the icon below the Edit drop-down menu).
 2.  Click on **Version Control** on the *New Project Wizard* pop-up.
-3.  Click on **Git** and you should be on a “Clone Git Repository” page.
+3.  Click on **Git** and you should be on a "Clone Git Repository" page.
 4.  Back to **your** `activity03-mlr` GitHub repo, click on the green
     **Code** button near the top of the page.
 5.  Verify that **HTTPS** is underlined in orange/red on the drop-down
     menu, then copy the URL provided.
-6.  Back in RStudio, paste the URL in the “Repository URL” text field.
-7.  The “Project directory name” text field should have automatically
+6.  Back in RStudio, paste the URL in the "Repository URL" text field.
+7.  The "Project directory name" text field should have automatically
     populated with `activity03-mlr`. If yours did not (this is usually
     an issue on Macs),
 
-- Click back into the “Repository URL” text field.
-- Highlight any bit of this text (it does not seem to matter what or how
-  much).
-- Press Ctrl/Cmd and the “Project directory name” should now have
-  automatically populated with `activity03-mlr`.
+-   Click back into the "Repository URL" text field.
+-   Highlight any bit of this text (it does not seem to matter what or
+    how much).
+-   Press Ctrl/Cmd and the "Project directory name" should now have
+    automatically populated with `activity03-mlr`.
 
-8.  In the “Create project as subdirectory of” field, click on
-    **Browse…**. Create a **New Folder** called “STA 631”, then within
-    this folder, create a **New Folder** called “Activities”, then click
-    **Choose**. If you already have this, you can simply browse to “STA
-    631/Activities”, then click **Choose**. Note that I am forcing you
+1.  In the "Create project as subdirectory of" field, click on
+    **Browse…**. Create a **New Folder** called "STA 631", then within
+    this folder, create a **New Folder** called "Activities", then click
+    **Choose**. If you already have this, you can simply browse to "STA
+    631/Activities", then click **Choose**. Note that I am forcing you
     to use my opinionated file system management style.
-9.  Click on **Create Project**.
+2.  Click on **Create Project**.
 
 Your screen should refresh and the **Files** pane should say that you
 are currently in your `activity03-mlr` folder that currently has the
@@ -121,14 +126,14 @@ password).
 Take a moment to reflect on what is possibly your second time doing this
 forking process.
 
-- What was easier this time?
-- What is still muddy?
-- What do you need to try/do/explore to help with this muddiness?
+-   What was easier this time?
+-   What is still muddy?
+-   What do you need to try/do/explore to help with this muddiness?
 
 ## Task 2: One quantitative response variable and two quantitative explanatory variable
 
 We will continue exploring the Human Freedom Index dataset. Recall that
-this is a report that attempts to summarize the idea of “freedom”
+this is a report that attempts to summarize the idea of "freedom"
 through a bunch of different variables for many countries around the
 globe. It serves as a rough objective measure for the relationships
 between the different types of freedom - whether it is political,
@@ -149,9 +154,9 @@ Read these directions first, then work through them.
     Teams workspace (linked on Blackboard), and post questions/issues in
     the **Muddy** channel. If someone else already posted what you
     though was muddy, add any clarification to their post and give them
-    a “+ 1” 👍. Remember that this space is for conversations as well as
-    posting questions. Read through your peers’ muddy posts and do your
-    best to provide help.
+    a "+ 1" :+1:. Remember that this space is for conversations as well
+    as posting questions. Read through your peers' muddy posts and do
+    your best to provide help.
 
 The rest of this `README` document contains tasks/directions for the
 second class meeting of this week.
@@ -165,8 +170,7 @@ This will be updated on Thu, Feb 2.
 This document is based on labs from
 [OpenIntro](https://www.openintro.org/).
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"
-style="border-width:0" alt="Creative Commons License" /></a><br />This
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br />This
 work is licensed under a
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
 Commons Attribution-ShareAlike 4.0 International License</a>.
